@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@font-face {
+    font-family: 'Casino3D';
+    src: url(fonts/casino/CasinoShadow.ttf);
+}
+@font-face {
+    font-family: 'CasinoDefault';
+    src: url(fonts/casino/Casino.ttf);
+}
+:root {
+    --default-font-family: 'Karla', sans-serif;
+    --title-font-family: 'CasinoDefault';
+    --bcg-color: linear-gradient(to right, #200122, #6f0000);
+    --title-color: #dd2721;
+    --counter-color: #daa520;
+    --counter-area-bcg-clr: #230121;
+    --bttn-bcg-color: #71100F;
+    --bttn-txt-color: #e6a417;
+    --btn-fnt-family: 'Casino3D';
+    --default-box-shadow: -3px 5px 30px rgba(0, 0, 0, 0.575);
+    --default-border-radius: 15px;
+    --default-border: 5px ridge var(--counter-color);
+
+    --normal-font-weight: 500;
+    --large-font-weight: 800;
+}
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-image: var(--bcg-color);
+    font-size: 1.6rem;
+    font-family: var(--default-font-family);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.75em;
+    padding: 1.25em;
+}
+
+.titulo,
+.dice-number,
+.dice-num-area,
+body { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    color: var(--counter-color);
+    font-family: var(--title-font-family);
+    font-weight: var(--normal-font-weight);
+    font-size: 10rem;
+    margin: 1.5rem;
+}
+.dice-number {
+    color: var(--counter-color);
+    font-weight: var(--large-font-weight);
+    font-size: 17rem;
+    font-family: var(--title-font-family);
+    text-align: center;
+    margin: auto;
+}
+[diceStatus] {
+    color: var(--counter-color);
+    font-family: var(--btn-fnt-family);
+    font-size: 10rem;
+}
+.hidden {
+    display: none;
+}
+
+.dice-num-area {
+    background-color: var(--counter-area-bcg-clr);
+    height: 18.75em;
+    width: 37.5em;
+    box-shadow: var(--default-box-shadow);
+    border: 5px ridge var(--counter-color);
+    border-radius: var(--default-border-radius);
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 0.9375em ;
+}
+.botao {
+    width: 20rem;
+    height: 10rem;
+    background-color: var(--btn-bcg-color);
+    color: var(--bttn-txt-color);
+    font-family: var(--btn-fnt-family);
+    font-size: 3.5rem;
+    font-weight: var(--large-font-weight);
+    box-shadow: var(--default-box-shadow);
+    
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+}
+
+.rodape {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--counter-area-bcg-clr);
+    color: var(--counter-color);
+}
+
+/* 980px */
+@media (max-width: 61.25em) {
+    .dice-num-area {
+        width: 50%;
+        height: 50%;
+    }
+    .dice-number {
+        font-size: 10rem;
+        padding: 0.3125em;
+    }
+    [diceStatus] {
+        font-size: 5rem;
+    }
+    .botoes {
+        flex-direction: column;
+    }
+}
+
+/* 535px */
+@media (max-width: 35.9375em) {
+    .titulo {
+        font-size: 5rem;
+    }
+    .botao {
+        width: 15rem;
+        height: 7rem;
+        font-size: 1.7rem;
+    }
+    .dice-num-area {
+        width: 14.0625em;
+    }
+}
