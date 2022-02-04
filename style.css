@@ -123,6 +123,13 @@ body {
     color: var(--counter-color);
 }
 
+.botao:hover {
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+
 /* 980px */
 @media (max-width: 61.25em) {
     .dice-num-area {
