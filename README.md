@@ -6,7 +6,7 @@ I created this game with the intention to use it for playing board games or any 
 This is a simple project that gathers all three technologies that I'm investing my time on: 
 
 - Javascript: DOM Manipulation
-- CSS: Styling with Flexbox
+- CSS: Style made with flexbox aiming for responsiviness.
 - HTML: Semantic code.
 
 Please, if you have any suggestions I'm all ears.
